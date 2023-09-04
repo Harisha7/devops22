@@ -1,0 +1,20 @@
+version: '3'
+
+networks:
+  my_network:
+    driver: bridge
+
+services:
+  service1:
+    build: ./service1
+    networks:
+      - my_network
+    ports:
+      - "5001:5001"
+
+  service2:
+    build: ./service2
+    networks:
+      - my_network
+    ports:
+      - "5002:5002"
