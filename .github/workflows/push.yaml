@@ -63,4 +63,4 @@ jobs:
         echo "------------------service details------------------"
         kubectl get service service2-service
         echo "------------------opening the service------------------"
-        curl $(minikube service service2-service --url)/        
+        curl $(minikube service service2-service --url)/       
