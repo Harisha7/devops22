@@ -1,6 +1,6 @@
 name: Deploy to Minikube
 on:
-  push:
+  push and pull:
     branches:
       - setup-github-workflow 
 jobs:
