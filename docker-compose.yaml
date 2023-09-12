@@ -9,8 +9,8 @@ services:
     build: ./service1
     networks:
       - my_network
-    ports:
-      - "5001:5001"
+    
+  
 
   service2:
     build: ./service2
@@ -18,3 +18,14 @@ services:
       - my_network
     ports:
       - "5002:5002"
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+     - "9090:9090"
+    networks:
+      - my_network  
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      
+         
